@@ -5,7 +5,6 @@
 ### Requirements
 
 - python==3.10.0
-- pytorch==2.1.1
 - numpy==1.26.4
 - pytorch-cuda==11.8
 - pandas==2.3.1
