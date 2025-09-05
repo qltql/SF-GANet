@@ -12,6 +12,11 @@
 - gdal==3.10.3
 - geopandas==1.1.1
 
+### GEE
+
+You can obtain the GEE code downloaded from Landsat from this link:
+https://code.earthengine.google.com/c05c7f552f848e8802df50c7a0cc8f81
+
 ## Datasets
 
 You can access the datasets through this link:
