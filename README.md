@@ -14,7 +14,7 @@
 
 ## Data Source
 
-You can obtain the GEE code downloaded from Landsat from this link:
+You can obtain Landsat data from this link:
 https://code.earthengine.google.com/c05c7f552f848e8802df50c7a0cc8f81
 
 ## Datasets
