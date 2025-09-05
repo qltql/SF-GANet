@@ -1,6 +1,3 @@
-# 文件名: losses.py
-# 描述: 集中管理所有自定义的损失函数。
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -9,7 +6,6 @@ import torch.nn.functional as F
 def focal_loss(outputs, targets, alpha=0.25, gamma=2.0):
     """
     Focal Loss for multi-class classification.
-    处理类别不平衡问题。
     """
     ce_loss = F.cross_entropy(outputs, targets, reduction='none')
     pt = torch.exp(-ce_loss)
@@ -31,8 +27,6 @@ class SupConLoss(nn.Module):
         labels = labels.contiguous().view(-1, 1)
         mask = torch.eq(labels, labels.T).float().to(device)
 
-        # SupCon需要 (bs, n_views, feat_dim) 格式，我们这里n_views=1
-        # 因此我们使用 unsqueeze(1) 增加一个n_views维度
         features = F.normalize(features.unsqueeze(1), dim=2)
 
         contrast_count = features.shape[1]
@@ -59,4 +53,5 @@ class SupConLoss(nn.Module):
 
         loss = - (self.temperature / self.base_temperature) * mean_log_prob_pos
         loss = loss.view(anchor_count, batch_size).mean()
+
         return loss
