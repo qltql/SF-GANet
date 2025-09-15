@@ -1,4 +1,4 @@
-# SF-GANet: A Spatial-Frequency Collaborative Framework with Aggregatively Pre-training for Long-Term Local Climate Zone Mapping
+# SF-GANet: A Spatial-Frequency Collaborative Framework with Aggregative Pre-training for Long-Term Local Climate Zone Mapping
 
 ## The Code
 
